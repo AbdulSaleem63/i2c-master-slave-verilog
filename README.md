@@ -48,11 +48,13 @@ SDA is the bidirectional data line used to transfer address and data information
 SCL is the clock line controlled by the Master to synchronize data transmission and reception.
 
 🧩 Project Modules
+
 1. I2C Master
 
 File:
 
-src/i2c_master.v
+### 1. I2C Master
+[View i2c_master.v](src/i2c_master.v)
 
 The I2C Master controls the communication process.
 
@@ -73,7 +75,10 @@ The Master controller is implemented using a finite state machine.
 
 File:
 
-src/i2c_slave.v
+
+### 2. I2C Slave
+[View i2c_slave.v](src/i2c_slave.v)
+
 
 The Slave responds to the Master during an I2C transaction.
 
@@ -88,7 +93,9 @@ Provides the required response during communication.
 
 File:
 
-src/tb/i2c_tb.v
+
+### 3. Testbench
+[View i2c_tb.v](src/tb/i2c_tb.v)
 
 The testbench is used to verify the interaction between the I2C Master and Slave.
 
@@ -103,6 +110,8 @@ Instantiates the I2C Slave.
 Connects the SDA and SCL signals.
 Runs the simulation.
 Generates waveform data for analysis.
+
+
 🔄 Design Methodology
 
 The project follows an RTL design and verification flow:
@@ -122,6 +131,8 @@ Waveform Analysis
 RTL Synthesis
       ↓
 FPGA Implementation
+
+
 🧠 FSM-Based Design
 
 The Master and Slave communication logic is implemented using a finite state machine approach.
@@ -155,24 +166,31 @@ done
 
 The waveform is used to analyze signal transitions and verify the implemented communication sequence.
 
-📊 Simulation Output
-output_waveform.jpeg
+## Simulation Output
 
+### I2C Simulation Waveform
 
-The following waveform shows the simulated I2C communication signals and their timing behavior.
+![I2C Simulation Waveform](images/output_waveform.jpeg)
 
-🖥️ RTL Design Output
-i2c_master_rtl.jpeg
+The waveform shows the simulated I2C communication signals and their timing behavior.
 
+### I2C Master RTL Design
+
+![I2C Master RTL Design](images/i2c_master_rtl.jpeg)
 
 The RTL design view represents the synthesized logical structure of the I2C Master module.
 
-🏭 FPGA Floorplan
-fpga_floorplan.jpeg
+### FPGA Floorplan
 
+![FPGA Floorplan](images/fpga_floorplan.jpeg)
 
-🔌 RTL Schematic
-rtl_schematic.jpeg
+The FPGA floorplan shows the placement and routing of the implemented design.
+
+### RTL Schematic
+
+![RTL Schematic](images/rtl_schematic.jpeg)
+
+The RTL schematic represents the generated logical structure of the I2C design.
 
 🛠️ Tools and Technologies
 Verilog HDL
@@ -184,7 +202,10 @@ RTL Simulation
 FPGA Design
 Xilinx Vivado
 XSIM Simulation
+
+
 📁 Repository Structure
+
 i2c-master-slave-verilog/
 │
 ├── src/
