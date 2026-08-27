@@ -204,9 +204,12 @@ Xilinx Vivado
 XSIM Simulation
 
 
-📁 Repository Structure
+## Repository Structure
 
+```text
 i2c-master-slave-verilog/
+│
+├── README.md
 │
 ├── src/
 │   ├── i2c_master.v
@@ -215,11 +218,9 @@ i2c-master-slave-verilog/
 │   └── tb/
 │       └── i2c_tb.v
 │
-├── images/
-│   ├── output_waveform.png
-│   ├── i2c_master_rtl.png
-│   ├── fpga_floorplan.png
-│   └── rtl_schematic.png
-│
-└── README.md
+└── images/
+    ├── output_waveform.jpeg
+    ├── i2c_master_rtl.jpeg
+    ├── fpga_floorplan.jpeg
+    └── rtl_schematic.jpeg
 
